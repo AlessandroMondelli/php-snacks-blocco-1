@@ -23,8 +23,16 @@ bisogna creare un nuovo paragrafo. -->
         </header>
         <main>
             <div class="container">
+                <h2>Il testo andrà a capo ad ogni punto!</h2>
                 <?php
                 $new_text = divPar($text); //Richiamo funzione per dividere testo
+                $text_p_length = count($new_text); //Lunghezza array
+
+                for ($i = 0; $i < $text_p_length; $i++) {
+                    ?>
+                    <p><?php echo $new_text[$i] ?></p>
+                <?php
+                }
                 ?>
             </div>
         </main>
