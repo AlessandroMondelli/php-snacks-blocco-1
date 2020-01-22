@@ -5,12 +5,12 @@ metodi che non conosciamo nella documentazione) che:
 ● “age” sia un numero.
 Se tutto è ok, stampare “Accesso riuscito”, altrimenti “Accesso negato” -->
 <?php
-    $name = $_GET["name"];
-    $email = $_GET["mail"];
-    $age = $_GET["age"];
+    $name = $_GET["name"]; //Prendo nome in get
+    $email = $_GET["mail"]; //Prendo email in get
+    $age = $_GET["age"]; //Prendo età in get
 
-    @include 'verAccesso.php';
-    $verifica = verAcc($name,$email,$age);
+    @include 'verAccesso.php'; //incluo file esterno php
+    $verifica = verAcc($name,$email,$age); //Richiamo funzione presente in file esterno
  ?>
 <!DOCTYPE html>
 <html>
@@ -27,6 +27,7 @@ Se tutto è ok, stampare “Accesso riuscito”, altrimenti “Accesso negato”
         </header>
         <main>
             <div class="container">
+                <?php //Stampo risultato ?>
                 <p><?php echo $verifica ?></p>
                 <!-- Possibile eseguire esercizio con Form -->
                 <!-- <form action="verAccesso.php" method="GET">
